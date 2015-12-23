@@ -10,7 +10,10 @@ header {
   /* line 16, ../components/sass/styles.scss */
   header nav {
     height: 50px;
-    background-color: #000000;
+    max-width:800px;
+    margin:0 auto;
+    padding-left:4%;
+    padding-right:4%
     clear: both;
     /* ul */ }
     /* line 21, ../components/sass/styles.scss */
@@ -31,9 +34,6 @@ header {
           color: #ffffff;
           font-weight: bold;
           text-decoration: none; }
-      /* line 39, ../components/sass/styles.scss */
-      header nav ul li:last-child {
-        padding-right: 45px; }
 
 /* header */
 /* line 46, ../components/sass/styles.scss */
@@ -159,8 +159,7 @@ footer {
 /* line 175, ../components/sass/styles.scss */
 .icon-ap-icon-svg:before {
   color: #ffffff;
-  font-size: 50px;
-  padding-left: 4%; }
+  font-size: 50px;}
 
 /* line 181, ../components/sass/styles.scss */
 h1, h2, h3, a {
