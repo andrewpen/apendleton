@@ -1,0 +1,173 @@
+/* line 9, ../components/sass/styles.scss */
+body {
+  background: #eeeeee;
+  margin: 0;
+  padding: 0; }
+
+/* line 14, ../components/sass/styles.scss */
+header {
+  /* nav */ }
+  /* line 16, ../components/sass/styles.scss */
+  header nav {
+    height: 50px;
+    background-color: #000000;
+    clear: both;
+    /* ul */ }
+    /* line 21, ../components/sass/styles.scss */
+    header nav ul {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      float: right;
+      /* li */ }
+      /* line 27, ../components/sass/styles.scss */
+      header nav ul li {
+        list-style-type: none;
+        float: left;
+        padding: 16px;
+        /* a */ }
+        /* line 32, ../components/sass/styles.scss */
+        header nav ul li a {
+          color: #ffffff;
+          font-weight: bold;
+          text-decoration: none; }
+      /* line 39, ../components/sass/styles.scss */
+      header nav ul li:last-child {
+        padding-right: 45px; }
+
+/* header */
+/* line 46, ../components/sass/styles.scss */
+section {
+  /* div.header-container */ }
+  /* line 47, ../components/sass/styles.scss */
+  section div.header-container {
+    position: relative;
+    /* div.top-image */
+    /* div.headlines */ }
+    /* line 50, ../components/sass/styles.scss */
+    section div.header-container {
+      background: url(../img/background-img2.jpg) center center no-repeat;
+      background-size: cover;
+      height: 350px;
+      border-bottom: 4px solid #000000; }
+      @media only screen and (max-width: 480px) {
+        /* line 50, ../components/sass/styles.scss */
+        section div.header-container {
+          background: url(../img/background-img2.jpg) -40px -10px no-repeat;
+          background-size: 660px;
+          height: 300px;
+          border:none; } }
+    /* line 64, ../components/sass/styles.scss */
+    section div.header-container div.headlines {
+      width: 400px;
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+      text-align: center;
+      /* h1, h2 */ }
+      @media only screen and (max-width: 480px) {
+        /* line 64, ../components/sass/styles.scss */
+        section div.header-container div.headlines {
+          position: inherit;
+          right: inherit;
+          bottom: inherit;
+          width: 100%;
+          padding-top: 240px; } }
+      /* line 79, ../components/sass/styles.scss */
+      section div.header-container div.headlines h1, section div.header-container div.headlines h2 {
+        color: #ffffff;
+        text-shadow: 2px 2px 4px #000000;
+        margin: 0; }
+        @media only screen and (max-width: 480px) {
+          /* line 79, ../components/sass/styles.scss */
+          section div.header-container div.headlines h1, section div.header-container div.headlines h2 {
+            color: #333333;
+            text-shadow: none; } }
+      /* line 91, ../components/sass/styles.scss */
+      section div.header-container div.headlines h1 {
+        line-height: 24pt;
+        font-size: 36pt; }
+        @media only screen and (max-width: 480px) {
+          /* line 91, ../components/sass/styles.scss */
+          section div.header-container div.headlines h1 {
+            line-height: 1.4rem;
+            font-size: 1.8rem; } }
+      /* line 100, ../components/sass/styles.scss */
+      section div.header-container div.headlines h2 {
+        font-size: 24pt; }
+        @media only screen and (max-width: 480px) {
+          /* line 100, ../components/sass/styles.scss */
+          section div.header-container div.headlines h2 {
+            font-size: 1.4rem; } }
+  /* line 110, ../components/sass/styles.scss */
+  section div.content {
+    padding: 4%; }
+    /* line 113, ../components/sass/styles.scss */
+    section div.content p {
+      font-size: 14pt;
+      padding-bottom: 15px; }
+
+/* section */
+/* line 120, ../components/sass/styles.scss */
+footer {
+  height: 50px;
+  background-color: #000000;
+  display: block;
+  position: relative;
+  clear: both; }
+  @media only screen and (max-width: 480px) {
+    /* line 120, ../components/sass/styles.scss */
+    footer {
+      text-align: center; } }
+  /* line 131, ../components/sass/styles.scss */
+  footer p {
+    color: #ffffff;
+    position: absolute;
+    left: 4%;
+    top: 15px;
+    font-size: 8pt; }
+    @media only screen and (max-width: 480px) {
+      /* line 131, ../components/sass/styles.scss */
+      footer p {
+        position: inherit;
+        left: inherit;
+        top: inherit;
+        padding: 5px 0; } }
+  /* line 148, ../components/sass/styles.scss */
+  footer nav ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 4%;
+    top: 15px; }
+    @media only screen and (max-width: 480px) {
+      /* line 148, ../components/sass/styles.scss */
+      footer nav ul {
+        position: inherit;
+        right: inherit;
+        top: inherit; } }
+    /* line 161, ../components/sass/styles.scss */
+    footer nav ul li {
+      display: inline-block;
+      padding-right: 10px; }
+      /* line 165, ../components/sass/styles.scss */
+      footer nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 12pt; }
+
+/* line 175, ../components/sass/styles.scss */
+.icon-ap-icon-svg:before {
+  color: #ffffff;
+  font-size: 50px;
+  padding-left: 4%; }
+
+/* line 181, ../components/sass/styles.scss */
+h1, h2, h3, a {
+  font-family: 'Fira Sans', sans-serif; }
+
+/* line 182, ../components/sass/styles.scss */
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial; }
