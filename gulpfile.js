@@ -2,7 +2,11 @@
 
 var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync'),
+  cache = require('gulp-cache'),
+  imagemin = require('gulp-imagemin'),
+  autoprefixer = require('gulp-autoprefixer'),
+  minifyCss = require('gulp-minify-css');
 
 
 // Lint JavaScript
@@ -10,6 +14,40 @@ gulp.task('jshint', function() {
   gulp.src('source/js/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
+});
+
+// Optimize images
+gulp.task('images', function() {
+  gulp.src('source/img/**/*')
+    .pipe(cache(imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/img'))
+});
+
+// Compile and automatically prefix stylesheets
+gulp.task('styles', function() {
+  var AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+
+  // For best performance, don't add Sass partials to `gulp.src`
+  return gulp.src([
+    'source/css/**/*.css'
+  ])
+    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+    // Concatenate and minify styles
+    .pipe(minifyCss())
+    .pipe(gulp.dest('dist/css'));
 });
 
 // Copy all files at the root level (source)
@@ -32,7 +70,7 @@ gulp.task('copy-fonts', function() {
 });
 
 // Watch files for changes & reload
-gulp.task('serve', ['jshint', 'copy-fonts', 'copy'], function() {
+gulp.task('serve', ['jshint', 'images', 'copy-fonts', 'copy'], function() {
   browserSync({
     notify: false,
     // Customize the Browsersync console logging prefix
@@ -45,6 +83,8 @@ gulp.task('serve', ['jshint', 'copy-fonts', 'copy'], function() {
   });
 
   gulp.watch('source/javascript/**/*.js', ['jshint']);
+  gulp.watch(['source/css/**/*.css'], ['styles', browserSync.reload]);
+  gulp.watch(['source/images/**/*'], browserSync.reload);
 });
 
 
