@@ -35,3 +35,5 @@ Serve up a local version of the site with gulp by running
 ```sh
 $ gulp serve
 ```
+
+This will also build a production optimized ready version into a new folder labelled 'dist'
