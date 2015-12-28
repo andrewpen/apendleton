@@ -1,11 +1,43 @@
-<body id="pageWrapper" style="background:#000000;">
+<body id="pageWrapper" style="background:#ccc;margin:0;">
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
   <style>
+  section#splash{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:blue;
+
+    -webkit-animation-name:disappear;
+    -webkit-animation-duration:3s;
+    -webkit-animation-delay:5s;
+    -webkit-animation-fill-mode:forwards;
+  }
+    #splash-content{
+      -webkit-animation-name:disappear;
+      -webkit-animation-duration:1s;
+      -webkit-animation-delay:5s;
+      -webkit-animation-fill-mode:forwards;
+    }
+    @-webkit-keyframes disappear {
+      0% {opacity:1;}
+      100% {opacity:0;}
+    }
+
+    nav div{
+      width:100%;
+      height:50px;
+      background:white;
+    }
   </style>
-  <section id="splash">
-    <div id="splash-content">
+  <section id="splash" style="text-align:center;">
+    <div>
       <object>
-        <embed src="img/ap-logo.svg" width="50%" height="50%">
+        <embed src="img/ap-logo.svg" width="50%" height="50%" id="splash-content">
       </object>
     </div>
   </section>
+  <nav>
+    <div>
+    </div>
+  </nav>
 </body>
