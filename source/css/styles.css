@@ -6,6 +6,10 @@ body {
 
 /* line 14, ../components/sass/styles.scss */
 header {
+  background-color:#2767E6;
+  box-shadow:0px 4px 8px 0px rgba(0,0,0,0.60);
+  z-index:100;
+  position:relative;
   /* nav */ }
   /* line 16, ../components/sass/styles.scss */
   header nav {
@@ -100,8 +104,7 @@ section {
           section div.header-container div.headlines h2 {
             font-size: 1.4rem; } }
   /* line 110, ../components/sass/styles.scss */
-  section div.content {
-    padding: 4%; }
+  section div.content {}
     /* line 113, ../components/sass/styles.scss */
     section div.content p {
       font-size: 14pt;
@@ -111,7 +114,7 @@ section {
 /* line 120, ../components/sass/styles.scss */
 footer {
   height: 50px;
-  background-color: #000000;
+  background-color: #00246B;
   display: block;
   position: relative;
   clear: both; }

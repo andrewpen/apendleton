@@ -17,7 +17,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
 
 		<style>
-			html{background:black;}
+			html{background:#00246B;}
 			#splash div{text-align:center;padding:150px 0;background-color:#000000;position: fixed;left:0;right:0;}
 			#splash{color:#fff;background-color:black;height:700px;}
 			#splash embed{max-width:250px;padding-bottom:10px;}
@@ -53,15 +53,23 @@
 			section div.header-container div.headlines h1, section div.header-container div.headlines h2{font-weight:100;}
 			section div.content{max-width:800px;margin:0 auto;}
 
-			header{position:relative;background-color:#000000;}
 			section#main {position:relative;background-color:#efefef;}
-
+			@media only screen and (max-width:480px) {
+				section#main {background-color:#fff;}
+			}
+			section#main .content-box{padding:4%;}
+			@media only screen and (min-width:480px) {
+				section#main .content-box{background-color:#fff;top:-40px;}
+			}
+			@media only screen and (min-width:800px) {
+				section#main .content-box{position:relative;}
+			}
 			footer{padding-left:4%;padding-right:4%;}
 			footer div{max-width: 800px;position:relative;margin:0 auto;}
 			footer div p{left:0;}
 			footer nav ul{right:0;}
 
-			@media only screen and (max-width: 450px) {
+			@media only screen and (max-width: 480px) {
 				#splash li{width:50%;display:inline-block;margin:10px 0;}
 				#splash a{padding:10%;width:initial;}
 
@@ -89,7 +97,7 @@
 		  </div>
 		</section> -->
 		<header id="header" class="wrapper">
-			<nav class="icon-ap-icon-svg" style="background-color:#000000;">
+			<nav class="icon-ap-icon-svg">
 				<ul>
 					<li><a href="#">home</a></li>
 					<li><a href="#">resume</a></li>
@@ -106,8 +114,10 @@
 				</div>
 			</div>
 			<div class="content">
-				<p>Hi, my name is Andrew and I have more than 10 years experience in web design and development. I have worked alongside some of the largest technology companies in the world including Adobe, Oracle, Google, Samsung, LG, and Apple.</p>
-				<p>I currently reside in the beautiful state of Arkansas, where people’s spirits are as high as the humidity! When I am not working, I enjoy spending time with my family, traveling, and reading. Reach out to me via email if you would like to connect concerning a web design or development project.</p>
+				<div class="content-box">
+					<p>Hi, my name is Andrew and I have more than 10 years experience in web design and development. I have worked alongside some of the largest technology companies in the world including Adobe, Oracle, Google, Samsung, LG, and Apple.</p>
+					<p>I currently reside in the beautiful state of Arkansas, where people’s spirits are as high as the humidity! When I am not working, I enjoy spending time with my family, traveling, and reading. Reach out to me via email if you would like to connect concerning a web design or development project.</p>
+				</div>
 			</div>
 		</section><!--
 		<section>
