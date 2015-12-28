@@ -1,0 +1,149 @@
+<!--
+	1) Just as the logo outline animates on page load, can I animate the erasing of the logo as the user scrolls down the page?
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<title>Andrew Pendleton | Digital Web Developer</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/fonts.css" type="text/css">
+		<meta charset="utf-8">
+		<meta name="description" content="Andrew Pendleton is a web designer and developer in Central Arkansas, based out of Little Rock. With over 10 years of digital marketing experience, he brings indepth knowledge and insight to any web design or development project.">
+		<meta name="keywords" content="Andrew Pendleton, web design, web developer, web development, develoment, digital marketing, marketing, Little Rock, Central Arkansas, Arkansas, html, css, javascript">
+		<meta name="viewport" content="width=device-width" />
+		<link id="canonical" rel="canonical" href="http://apendleton.com">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
+
+		<style>
+			html{background:black;}
+			#splash div{text-align:center;padding:150px 0;background-color:#000000;position: fixed;left:0;right:0;}
+			#splash{color:#fff;background-color:black;height:700px;}
+			#splash embed{max-width:250px;padding-bottom:10px;}
+			#splash h2{font-size:110%;}
+			#splash h1, #splash h2{
+	      opacity:0;
+	      color:#ffffff;
+				font-weight:100;
+				margin:0;
+	      -webkit-animation: fadein 2s ease-in 3s forwards; /* Safari, Chrome and Opera > 12.1 */
+	         -moz-animation: fadein 2s ease-in 3s forwards; /* Firefox < 16 */
+	          -ms-animation: fadein 2s ease-in 3s forwards; /* Internet Explorer */
+	           -o-animation: fadein 2s ease-in 3s forwards; /* Opera < 12.1 */
+	              animation: fadein 2s ease-in 3s forwards;
+	    }
+	    @keyframes          fadein {from { opacity: 0; } to   { opacity: 1; } }
+	    @-moz-keyframes     fadein {from { opacity: 0; } to   { opacity: 1; } }
+	    @-webkit-keyframes  fadein {from { opacity: 0; } to   { opacity: 1; } }
+	    @-ms-keyframes      fadein {from { opacity: 0; } to   { opacity: 1; } }
+	    @-o-keyframes       fadein {from { opacity: 0; } to   { opacity: 1; } }
+
+			#splash ul{list-style-type:none;padding:0;margin-top:50px;opacity:0;
+				-webkit-animation: fadein 2s ease-in 4s forwards; /* Safari, Chrome and Opera > 12.1 */
+	         -moz-animation: fadein 2s ease-in 4s forwards; /* Firefox < 16 */
+	          -ms-animation: fadein 2s ease-in 4s forwards; /* Internet Explorer */
+	           -o-animation: fadein 2s ease-in 4s forwards; /* Opera < 12.1 */
+	              animation: fadein 2s ease-in 4s forwards;
+			}
+			#splash li{display:inline-block;border:1px solid #fff;margin:0 10px;font-size:14px;}
+			#splash a{color:white;text-decoration:none;display:block;width:160px;padding:10px 0;}
+			#splash a:hover{background-color:white;color:black;}
+
+			section div.header-container div.headlines h1, section div.header-container div.headlines h2{font-weight:100;}
+			section div.content{max-width:800px;margin:0 auto;}
+
+			header{position:relative;background-color:#000000;}
+			section#main {position:relative;background-color:#efefef;}
+
+			footer{padding-left:4%;padding-right:4%;}
+			footer div{max-width: 800px;position:relative;margin:0 auto;}
+			footer div p{left:0;}
+			footer nav ul{right:0;}
+
+			@media only screen and (max-width: 450px) {
+				#splash li{width:50%;display:inline-block;margin:10px 0;}
+				#splash a{padding:10%;width:initial;}
+
+			}
+		</style>
+
+	</head>
+
+	<body id="pageWrapper">
+
+		<!-- <section id="splash">
+			<div id="splash-content">
+		    <object>
+		      <embed src="img/ap-logo.svg" width="50%" height="50%">
+		    </object>
+				<h1>Andrew Pendleton</h1>
+				<h2>designer &amp; developer</h2>
+				<nav>
+					<ul>
+						<li><a href="#">About Andrew</a></li>
+						<li><a href="#">Digital Resume</a></li>
+						<li><a href="#">Web Development Blog</a></li>
+					</ul>
+				</nav>
+		  </div>
+		</section> -->
+		<header id="header" class="wrapper">
+			<nav class="icon-ap-icon-svg" style="background-color:#000000;">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">resume</a></li>
+					<li><a href="http://blog.apendleton.com">blog</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="main">
+			<div class="header-container">
+				<!-- <div class="top-image"></div> -->
+				<div class="headlines">
+					<h1>Andrew Pendleton</h1>
+					<h2>web developer</h2>
+				</div>
+			</div>
+			<div class="content">
+				<p>Hi, my name is Andrew and I have more than 10 years experience in web design and development. I have worked alongside some of the largest technology companies in the world including Adobe, Oracle, Google, Samsung, LG, and Apple.</p>
+				<p>I currently reside in the beautiful state of Arkansas, where people’s spirits are as high as the humidity! When I am not working, I enjoy spending time with my family, traveling, and reading. Reach out to me via email if you would like to connect concerning a web design or development project.</p>
+			</div>
+		</section><!--
+		<section>
+			<h2>Professional Skills</h2>
+			<div>
+				<h3>Photoshop</h3>
+				<p></p>
+			</div>
+			<div>
+				<h3>Illustration</h3>
+				<p></p>
+			</div>
+			<div>
+				<h3>Layout</h3>
+				<p></p>
+			</div>
+		</section>-->
+		<footer>
+			<div>
+				<p>Copyright &copy; 2015 Andrew Pendleton</p>
+				<nav>
+					<ul>
+						<!--<li><a href="mail:contact@apendleton.com" title="email me" class="icon-mail2" target="_blank"></a></li>
+						<li><a href="http://blog.apendleton.com" title="read my latest blog post" class="icon-wordpress" target="_blank"></a></li>-->
+						<li><a href="https://www.linkedin.com/in/andrewpendleton
+	" title="reach out to me on LinkedIn" class="icon-linkedin2" target="_blank"></a></li>
+						<li><a href="https://www.facebook.com/andrew.d.pendleton" title="follow me on Facebook" class="icon-facebook" target="_blank"></a></li>
+						<li><a href="https://twitter.com/IamA3K" title="follow me on Twitter" class="icon-twitter" target="_blank"></a></li>
+						<li><a href="https://instagram.com/andrewpen/" title="follow me on Instagram" class="icon-instagram" target="_blank"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
