@@ -54,6 +54,11 @@ section {
       background-size: cover;
       height: 350px;
       border-bottom: 4px solid #000000; }
+      @media only screen and (max-width: 800px) {
+        section div.header-container {
+          background: url(../img/background-img2.jpg) -125px center no-repeat;
+          background-size: cover;}
+      }
       @media only screen and (max-width: 480px) {
         /* line 50, ../components/sass/styles.scss */
         section div.header-container {
@@ -65,8 +70,8 @@ section {
     section div.header-container div.headlines {
       width: 400px;
       position: absolute;
-      bottom: 20%;
-      right: 10%;
+      top: 200px;
+      right: 4%;
       text-align: center;
       /* h1, h2 */ }
       @media only screen and (max-width: 480px) {
